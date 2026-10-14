@@ -1,0 +1,49 @@
+name: Build and Push WebGoat Docker Image (Corretto JDK)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ 리포지토리 체크아웃
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # 2️⃣ JDK 15 (Zulu) 설치 — WebGoat 8.2는 JDK 15 기준
+      - name: Set up Zulu JDK 15
+        uses: actions/setup-java@v4
+        with:
+          java-version: '15'
+          distribution: 'zulu'
+
+      # 3️⃣ Maven으로 WebGoat 빌드
+      - name: Build WebGoat JAR
+        run: |
+          mvn clean package -DskipTests -Dlombok.version=1.18.30
+          ls -lh webgoat-server/target
+
+      # 4️⃣ Docker Hub 로그인
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: linux1004
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # 5️⃣ Docker 이미지 빌드
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:latest \
+                       -t ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:v8.2.0-SNAPSHOT \
+                       -f Dockerfile .
+
+      # 6️⃣ Docker Hub로 푸시
+      - name: Push Docker image
+        run: |
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:v8.2.0-SNAPSHOT

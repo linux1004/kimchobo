@@ -1,0 +1,16 @@
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/requests/Requests.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/FileServer.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/user/UserValidator.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/MvcConfiguration.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/user/UserRepository.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/WebSecurityConfig.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/mailbox/MailboxController.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/requests/LandingPage.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/user/RegistrationController.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/mailbox/Email.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/user/WebGoatUser.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/requests/WebWolfTraceRepository.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/mailbox/MailboxRepository.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/user/UserForm.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/WebWolf.java
+/Users/user/webgoat_origin/WebGoat/webwolf/src/main/java/org/owasp/webwolf/user/UserService.java
