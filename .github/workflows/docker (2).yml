@@ -38,12 +38,12 @@ jobs:
       # 5️⃣ Docker 이미지 빌드
       - name: Build Docker image
         run: |
-          docker build -t linux1004/webgoat/webgoat:latest \
-                       -t linux1004/webgoat/webgoat:v8.2.0-SNAPSHOT \
+          docker build -t linux1004/webgoat:latest \
+                       -t linux1004/webgoat:v8.2.0-SNAPSHOT \
                        -f Dockerfile .
 
       # 6️⃣ Docker Hub로 푸시
       - name: Push Docker image
         run: |
-          docker push linux1004/webgoat/webgoat:latest
-          docker push linux1004/webgoat/webgoat:v8.2.0-SNAPSHOT
+          docker push linux1004/webgoat:latest
+          docker push linux1004/webgoat:v8.2.0-SNAPSHOT
