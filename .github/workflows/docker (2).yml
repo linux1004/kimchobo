@@ -45,5 +45,5 @@ jobs:
       # 6️⃣ Docker Hub로 푸시
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:v8.2.0-SNAPSHOT
+          docker push linux1004/webgoat/webgoat:latest
+          docker push linux1004/webgoat/webgoat:v8.2.0-SNAPSHOT
