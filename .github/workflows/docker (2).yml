@@ -38,8 +38,8 @@ jobs:
       # 5️⃣ Docker 이미지 빌드
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:latest \
-                       -t ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:v8.2.0-SNAPSHOT \
+          docker build -t linux1004/webgoat/webgoat:latest \
+                       -t linux1004/webgoat/webgoat:v8.2.0-SNAPSHOT \
                        -f Dockerfile .
 
       # 6️⃣ Docker Hub로 푸시
