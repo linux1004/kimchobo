@@ -38,7 +38,8 @@ jobs:
       # 5️⃣ Docker 이미지 빌드
       - name: Build Docker image
         run: |
-          docker build -t linux1004/webgoat:latest \
+          docker build --build-arg webgoat_version=v8.2.0-SNAPSHOT
+                       -t linux1004/webgoat:latest \
                        -t linux1004/webgoat:v8.2.0-SNAPSHOT \
                        -f webgoat-server/Dockerfile webgoat-server
 
